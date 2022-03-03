@@ -1,9 +1,6 @@
 package com.agua;
 
-import com.agua.notification.Cadastro;
-import com.agua.notification.Contrato;
-import com.agua.notification.Endereco;
-import com.agua.notification.Pessoa;
+import com.agua.notification.model.*;
 import com.agua.service.contratoService;
 
 public class App {
@@ -14,12 +11,13 @@ public class App {
         Cadastro cadastro = new Cadastro();
         cadastro.setAtivo(true);
         cadastro.setNumero(27);
+        cadastro.setNotificacaoTipo(notificacaoTipo.WHATS);
 
         Pessoa pessoa = new Pessoa();
         pessoa.setCpf("123123");
         pessoa.setNome("bruno");
         pessoa.setRg("132323");
-        pessoa.setTelefone("123123123123");
+        pessoa.setTelefone("998977654");
 
         Endereco endereco = new Endereco();
         endereco.setBairro("santo antonio");
@@ -33,6 +31,15 @@ public class App {
         contrato.setCadastro(cadastro);
 
         contratoService service = new contratoService();
+        String mensagem = service.conteudoContrato(contrato);
+
+        transmissorMensagem transmissor = null;
+        if(cadastro.getNotificacaoTipo() == notificacaoTipo.SMS)
+            transmissor = new transmissorMensagemSMS();
+        else
+            transmissor = new transmissorMensagemWhats();
+
+        transmissor.transmitir(contrato.getCadastro().getPessoa().getTelefone(), mensagem);
 
         System.out.println(service.conteudoContrato(contrato));
     }

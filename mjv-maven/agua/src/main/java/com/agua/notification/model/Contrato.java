@@ -1,4 +1,4 @@
-package com.agua.notification;
+package com.agua.notification.model;
 
 public class Contrato {
     private long numeroProtocolo;

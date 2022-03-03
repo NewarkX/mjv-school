@@ -1,8 +1,9 @@
-package com.agua.notification;
+package com.agua.notification.model;
 
 public class Cadastro {
     private int numero;
     private boolean ativo;
+    private notificacaoTipo notificacaoTipo;
     private Pessoa pessoa;
 
     public int getNumero() {
@@ -27,5 +28,13 @@ public class Cadastro {
 
     public void setPessoa(Pessoa pessoa) {
         this.pessoa = pessoa;
+    }
+
+    public com.agua.notification.model.notificacaoTipo getNotificacaoTipo() {
+        return notificacaoTipo;
+    }
+
+    public void setNotificacaoTipo(com.agua.notification.model.notificacaoTipo notificacaoTipo) {
+        this.notificacaoTipo = notificacaoTipo;
     }
 }

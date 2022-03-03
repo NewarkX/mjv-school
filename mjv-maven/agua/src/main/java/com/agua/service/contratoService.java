@@ -1,6 +1,6 @@
 package com.agua.service;
 
-import com.agua.notification.Contrato;
+import com.agua.notification.model.Contrato;
 
 public class contratoService {
 
