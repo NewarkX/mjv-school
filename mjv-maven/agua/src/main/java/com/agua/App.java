@@ -4,6 +4,7 @@ import com.agua.notification.Cadastro;
 import com.agua.notification.Contrato;
 import com.agua.notification.Endereco;
 import com.agua.notification.Pessoa;
+import com.agua.service.contratoService;
 
 public class App {
     public static void main( String[] args ){
@@ -30,5 +31,9 @@ public class App {
 
         cadastro.setPessoa(pessoa);
         contrato.setCadastro(cadastro);
+
+        contratoService service = new contratoService();
+
+        System.out.println(service.conteudoContrato(contrato));
     }
 }
