@@ -3,6 +3,7 @@ package com.agualuz;
 public class Contrato {
     private long numeroProtocolo;
     private Cadastro cadastro;
+    private Servico servico;
 
     public long getNumeroProtocolo() {
         return numeroProtocolo;
