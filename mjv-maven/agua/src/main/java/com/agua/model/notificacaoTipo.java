@@ -1,4 +1,4 @@
-package com.agua.notification.model;
+package com.agua.model;
 
 public enum notificacaoTipo {
     SMS,

@@ -1,4 +1,4 @@
-package com.agua.notification.model;
+package com.agua.model;
 
 public class Pessoa {
     private String nome;
