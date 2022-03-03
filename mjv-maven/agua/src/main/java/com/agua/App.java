@@ -11,7 +11,7 @@ public class App {
         Cadastro cadastro = new Cadastro();
         cadastro.setAtivo(true);
         cadastro.setNumero(27);
-        cadastro.setNotificacaoTipo(notificacaoTipo.WHATS);
+        cadastro.setNotificacaoTipo(notificacaoTipo.WHATS   );
 
         Pessoa pessoa = new Pessoa();
         pessoa.setCpf("123123");
