@@ -1,11 +1,10 @@
 package com.agualuz;
 
 import com.agualuz.model.*;
-import com.agualuz.output.GeradorArquivoCsv;
+import com.agualuz.output.GeradorArquivo;
 import com.agualuz.repository.ContratoRepository;
 
 import java.io.IOException;
-import java.util.Date;
 import java.util.List;
 
 public class App{
@@ -21,8 +20,9 @@ public class App{
 
     private static void faseGeracaoArquivo() throws IOException {
         List<Contrato> contratos =  contratoRepository.listarTodos();
-        GeradorArquivoCsv gerador = new GeradorArquivoCsv();
-        gerador.gerarArquivo(contratos);
+        GeradorArquivo gerador = new GeradorArquivo();
+        gerador.gerarArquivoCsv(contratos);
+        gerador.gerarArquivoTxt(contratos);
     }
 
     private static void faseAtracao() {
@@ -56,7 +56,7 @@ public class App{
 
         Pessoa pessoa2 = new Pessoa();
         pessoa2.setCpf("32123123");
-        pessoa2.setNome("Bruno Manhães Alves");
+        pessoa2.setNome("Raimundo Nonato Loureiro Castello Branco");
         pessoa2.setRg("6745674567");
         pessoa2.setPais(Pais.BRASIL);
         pessoa2.setCelular("9983456456");
