@@ -1,20 +1,24 @@
-package com.agualuz;
+package com.agualuz.model;
 
 public class Pessoa {
     private String nome;
     private String cpf;
     private String rg;
-    private String telefone;
+    private String celular;
+    private Endereco endereco;
     private Pais pais;
-
+    public void setPais(Pais pais) {
+        this.pais = pais;
+    }
+    public Pais getPais() {
+        return pais;
+    }
     public String getNome() {
         return nome;
     }
-
     public void setNome(String nome) {
         this.nome = nome;
     }
-
     public String getCpf() {
         return cpf;
     }
@@ -22,36 +26,22 @@ public class Pessoa {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
-
     public String getRg() {
         return rg;
     }
-
     public void setRg(String rg) {
         this.rg = rg;
     }
-
-    public String getTelefone() {
-        return telefone;
+    public String getCelular() {
+        return celular;
     }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
+    public void setCelular(String celular) {
+        this.celular = celular;
     }
-
-    
-    /**
-     * @return Pais return the pais
-     */
-    public Pais getPais() {
-        return pais;
+    public Endereco getEndereco() {
+        return endereco;
     }
-
-    /**
-     * @param pais the pais to set
-     */
-    public void setPais(Pais pais) {
-        this.pais = pais;
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
     }
-
 }

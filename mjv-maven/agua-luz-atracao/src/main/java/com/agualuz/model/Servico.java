@@ -1,4 +1,4 @@
-package com.agualuz;
+package com.agualuz.model;
 
 public enum Servico {
     AGUA("Água",137.21),
