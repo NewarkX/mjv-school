@@ -18,12 +18,14 @@ public class App
         livro1.setNome("A bela e a fera");
         livro1.setAutor("Gabrielle-Suzanne Barbot");
         livro1.setEdicao("1");
+        livro1.setCategoria("fantasia");
         livroRepository.save(livro1);
 
         Livro livro2 = new Livro();
-        livro2.setNome("O chamado dos unknow");
+        livro2.setNome("O chamado dos unown");
         livro2.setAutor("Willian");
         livro2.setEdicao("1");
+        livro2.setCategoria("fantasia");
         livroRepository.save(livro2);
 
         Livro livro = livroRepository.findById(1);
