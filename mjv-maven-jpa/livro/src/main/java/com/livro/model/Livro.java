@@ -82,6 +82,8 @@ public class Livro {
                 ", nome='" + nome + '\'' +
                 ", edicao='" + edicao + '\'' +
                 ", autor='" + autor + '\'' +
+                ", categoria='" + categoria + '\'' +
+                ", valor=" + valor +
                 '}';
     }
 }

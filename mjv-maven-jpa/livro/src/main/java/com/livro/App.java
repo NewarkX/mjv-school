@@ -19,6 +19,7 @@ public class App
         livro1.setAutor("Gabrielle-Suzanne Barbot");
         livro1.setEdicao("1");
         livro1.setCategoria("fantasia");
+        livro1.setValor(20.00);
         livroRepository.save(livro1);
 
         Livro livro2 = new Livro();
@@ -26,6 +27,7 @@ public class App
         livro2.setAutor("Willian");
         livro2.setEdicao("1");
         livro2.setCategoria("fantasia");
+        livro2.setValor(23.00);
         livroRepository.save(livro2);
 
         Livro livro = livroRepository.findById(1);
