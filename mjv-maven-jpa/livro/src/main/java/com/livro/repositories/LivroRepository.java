@@ -22,7 +22,7 @@ public class LivroRepository {
         em.getTransaction().commit();
     }
     public Livro findById(Integer id){
-        Livro livro = em.find(Livro.class, id);
+        Livro livro = em.find(Livro.class, id); 
         return livro;
     }
     public List<Livro> findAll(){

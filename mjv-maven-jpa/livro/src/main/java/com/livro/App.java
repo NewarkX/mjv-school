@@ -14,21 +14,27 @@ public class App
     public static void main( String[] args )
     {
         LivroRepository livroRepository = new LivroRepository();
-//      Livro livro = new Livro();
-//      livro.setNome("A bela e a fera");
-//      livro.setAutor("Gabrielle-Suzanne Barbot");
-//      livro.setEdicao("1");
-//      livroRepository.save(livro);
+        Livro livro1 = new Livro();
+        livro1.setNome("A bela e a fera");
+        livro1.setAutor("Gabrielle-Suzanne Barbot");
+        livro1.setEdicao("1");
+        livroRepository.save(livro1);
 
-//        Livro livro = livroRepository.findById(1);
-//        if(livro != null){
-//            System.out.println(livro.getNome());
-//            System.out.println(livro);
-//        }
+        Livro livro2 = new Livro();
+        livro2.setNome("O chamado dos unknow");
+        livro2.setAutor("Willian");
+        livro2.setEdicao("1");
+        livroRepository.save(livro2);
+
+        Livro livro = livroRepository.findById(1);
+        if(livro != null){
+            System.out.println(livro.getNome());
+            System.out.println(livro);
+        }
 
         List<Livro> livros = livroRepository.findAll();
-        for (Livro l: livros){
-            System.out.println(l);
-        }
+            for(Livro l : livros) {
+                System.out.println(l);
+            }
     }
 }
