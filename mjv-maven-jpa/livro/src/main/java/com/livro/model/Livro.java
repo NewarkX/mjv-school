@@ -23,6 +23,9 @@ public class Livro {
     private String autor;
     @NotNull
     private String categoria;
+    @NotNull
+    private double valor;
+
 
     public int getId() {
         return id;
@@ -62,6 +65,14 @@ public class Livro {
 
     public void setCategoria(String categoria) {
         this.categoria = categoria;
+    }
+
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
     }
 
     @Override
