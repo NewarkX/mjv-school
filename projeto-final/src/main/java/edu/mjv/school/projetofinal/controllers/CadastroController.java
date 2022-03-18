@@ -1,6 +1,8 @@
 package edu.mjv.school.projetofinal.controllers;
 
 import edu.mjv.school.projetofinal.model.Cadastro;
+import edu.mjv.school.projetofinal.repository.CadastroRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -8,6 +10,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/cadastros")
 public class CadastroController {
+
+    @Autowired
+    private CadastroRepository cadastroRepository;
 
     @GetMapping
     public List<Cadastro> listar(){
@@ -25,6 +30,7 @@ public class CadastroController {
     public void gravar(@RequestBody Cadastro cadastro){
         System.out.println("salvando dados");
         System.out.println(cadastro);
+        cadastroRepository.save(cadastro);
     }
 
     @PutMapping
